@@ -1,22 +1,18 @@
 import { useContext } from "react";
-import { SchmitterContext } from "../utils/context";
+import { SchmitterContext } from "../utils/context.js";
 
-interface AvatarProps {
-    size?: 'small';
-}
-
-const Avatar = ({size}: AvatarProps) => {
+const Avatar = ({size}) => {
     const {user, changeAvatar, changeName} = useContext(SchmitterContext);
     return (
         <img 
             onClick={() => {
                 const url = prompt("Enter avatar URL");
-                changeAvatar(url ? url : "");
+                changeAvatar(url);
             }}
             onContextMenu={(e) => {
                 e.preventDefault();
                 const name = prompt("Enter new username");
-                changeName(name ? name : "");
+                changeName(name);
             }}
             className={`user-avatar ${size ?? ''}`} 
             src={user.avatar} 

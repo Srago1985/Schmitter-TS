@@ -1,4 +1,4 @@
-import Stats from "./Stats.js";
+import Stats from "./Stats.jsx";
 
 const Sidebar = () => {
     return (

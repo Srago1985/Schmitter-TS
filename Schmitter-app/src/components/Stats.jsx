@@ -1,4 +1,4 @@
-import Avatar from "./Avatar.js";
+import Avatar from "./Avatar.jsx";
 import { useContext } from "react";
 import { SchmitterContext } from "../utils/context.js";
 
