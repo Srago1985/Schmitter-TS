@@ -1,6 +1,6 @@
 import './App.css'
-import Navigation from "./components/Navigation.jsx";
-import Body from "./components/Body.jsx";
+import Navigation from "./components/Navigation.js";
+import Body from "./components/Body.js";
 import {useState} from "react";
 import { SchmitterContext } from './utils/context.js';
 
@@ -15,11 +15,11 @@ function App() {
         following: 100
     })
 
-    const changeAvatar = url => {
+    const changeAvatar = (url: string) => {
         setUser(prev => ({...prev, avatar: url || prev.avatar}))
     }
 
-    const changeName = name => {
+    const changeName = (name: string) => {
         setUser(prev => ({...prev, name: name || prev.name}))
     }
 
